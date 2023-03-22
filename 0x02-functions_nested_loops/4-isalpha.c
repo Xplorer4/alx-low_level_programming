@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints the alphabet 10 times
+ * _isalpha - checks for alphabetic character
+ * @c: is the character letter
+ * Return: (1) if if c is a letter, lowercase or uppercase otherwise 0
  */
-void print_alphabet_x10(void)
+
+int _isalpha(int c)
 {
-	int num = 0;
-	char letter;
-
-	while (num < 10)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-			_putchar(letter);
-		_putchar('\n');
-		num++;
+		return (1);
 	}
+	return (0);
 }
-
